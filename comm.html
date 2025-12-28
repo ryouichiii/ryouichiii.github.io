@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <!-- Encoding, mobile width and initial zoom -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <!-- Page Title -->
         <title>˗ˏˋ ryouichi.uk ˊˎ˗　—　Art Commissions</title>
 
@@ -11,20 +15,92 @@
         <link rel="manifest" href="./favicon/site.webmanifest">
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="./style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="./style.css" media="screen">
+
+        <!-- JS -->
+        <script type="text/javascript" src="./app.js" defer></script>
     </head>
     <body>
         <!-- Page Loader -->
         <div id="preloader"></div>
 
-        <h1>Art Commissions</h1>
+        <!-- Navigation Bar -->
+        <nav id="sidebar">
+            <!-- Site List -->
+            <ul>
+                <!-- Logo / Site Name + Size Toggle -->
+                <li>
+                    <span class="logo"><a href="secret-index.html">ryouichi.uk!! :D</a></span>
+                    <button onclick=toggleSidebar() id="toggle-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg>
+                    </button>
+                </li>
+                <!-- About Me Button -->
+                <li>
+                    <a href="about.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-240q-56 0-107 17.5T280-170v10h400v-10q-42-35-93-52.5T480-240Zm0-80q69 0 129 21t111 59v-560H240v560q51-38 111-59t129-21Zm0-160q-25 0-42.5-17.5T420-540q0-25 17.5-42.5T480-600q25 0 42.5 17.5T540-540q0 25-17.5 42.5T480-480ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm240-320q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm0-140Z"/></svg>
+                        <span>About Me</span>
+                    </a>
+                </li>
+                <!-- My UTAUs Dropdown -->
+                <li class="has-dropdown">
+                    <!-- Link to dedicated UTAU page -->
+                    <a href="utau.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M740-560h140v80h-80v220q0 42-29 71t-71 29q-42 0-71-29t-29-71q0-42 29-71t71-29q8 0 18 1.5t22 6.5v-208ZM120-160v-112q0-35 17.5-63t46.5-43q62-31 126-46.5T440-440q42 0 83.5 6.5T607-414q-20 12-36 29t-28 37q-26-6-51.5-9t-51.5-3q-57 0-112 14t-108 40q-9 5-14.5 14t-5.5 20v32h321q2 20 9.5 40t20.5 40H120Zm320-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0-80Zm0 400Z"/></svg>
+                        <span>My UTAUs</span>
+                    </a>
+                    <!-- Dropdown button -->
+                    <button onclick=toggleSubMenu(this) class="dropdown-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                    </button>
+                    <!-- Dropdown contents -->
+                    <ul class="sub-menu">
+                        <div>
+                            <li><a href="utau/kiiro.html">Hikuine Kiiro</a></li>
+                            <li><a href="utau/cecil.html">CECIL</a></li>
+                            <li><a href="utau/kazuya.html">Oguma Kazuya</a></li>
+                            <li><a href="utau/miyuki.html">Shohei Miyuki</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <!-- My USTs Button -->
+                <li>
+                    <a href="ust.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+                        <span>My USTs</span>
+                    </a>
+                </li>
+                <!-- Art Commissions Button (Active) -->
+                <li class="active">
+                    <a href="comm.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-120q-45 0-89-22t-71-58q26 0 53-20.5t27-59.5q0-50 35-85t85-35q50 0 85 35t35 85q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 23-5.5 42T220-202q5 2 10 2h10Zm230-160L360-470l358-358q11-11 27.5-11.5T774-828l54 54q12 12 12 28t-12 28L470-360Zm-190 80Z"/></svg>
+                        <span>Art Commissions</span>
+                    </a>
+                </li>
+                <!-- Links Button -->
+                <li>
+                    <a href="links.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/></svg>
+                        <span>Links</span>
+                    </a>
+                </li>
+                <!-- Credit at bottom of sidebar -->
+                <li>
+                    <span class="credit">ryouichi <span id="year"></span></span>
+                </li>
+            </ul>
+        </nav>
 
-        <p>test</p>
+        <!-- Page Content -->
+        <main>
+            <div class="container">
+                <h1>Art Commissions</h1>
 
-        <!-- Back Button -->
-        <p>
-            <button onclick="document.location='./secret-index.html'">Go Back</button>
-        </p>
+                <p>test</p>
+            </div>
+        </main>
+            
+        
 
         <!-- Show page after loading -->
         <script>
