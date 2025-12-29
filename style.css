@@ -242,7 +242,9 @@ hr {
 /* Sidebar footer (hr + theme toggle + credit) */
 #sidebar .sidebar-footer {
     position: absolute;
-    bottom: 12px;
+    bottom: 0px;
+    padding-bottom: 10px;
+    background: var(--background);
 }
 #sidebar .sidebar-footer hr {
     margin: 0 0 .5em 0;
@@ -356,11 +358,12 @@ hr {
             justify-content: center;
         }
         /* Removes logo, text, credit and dropdown (dropdown button was mean to me)*/
-        ul li span, ul li:first-child, ul .dropdown-button {
+        ul li span, ul li:first-child, ul .dropdown-button, ul .sub-menu {
             display: none;
         }
     }
     /* ===== MOBILE SIDEBAR END ===== */
+
     #preloader {
         background-size: 25%;
     }
