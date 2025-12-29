@@ -11,6 +11,22 @@ const savedSidebar = localStorage.getItem('sidebarClosed');
 /* Grab current year */
 yearElement.textContent = currentYear;
 
+/* Preloader */
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+    var s = loader.style;
+    s.opacity = 1;
+    /*  */
+    var intervalId = setInterval(function(){
+        s.opacity -= 0.1;
+        if (s.opacity <= 0) {
+            clearInterval(intervalId);
+            loader.style.display = "none";
+        }
+    }, 40);
+});
+
+
 /* Add listener for theme toggle */
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
