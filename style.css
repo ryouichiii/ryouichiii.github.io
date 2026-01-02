@@ -123,7 +123,7 @@ hr {
     box-sizing: border-box;
     background-color: var(--background);
     padding: 10px;
-    height: 5vh;
+    height: 50px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -206,7 +206,7 @@ hr {
     box-shadow: 0 0 30px 5px var(--shadow);
     border-right: 2px solid var(--colour3);
     background-color: var(--background);
-    height: 95vh;
+    height: calc(100vh - 50px);
     width: 250px;
     padding: 5px;
     z-index: 1;
