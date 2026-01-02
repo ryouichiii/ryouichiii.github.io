@@ -13,6 +13,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    /* Carousel link variables */
+    --footlink-width: 88px;
+    --footlink-height: 31px;
+    --carousel-duration: 30s;
+    --link-amount: 8;
 }
 
 * {
@@ -110,28 +116,86 @@ hr {
 /* ===== THEMES END ===== */
 
 /* ===== CAROUSEL ===== */
-/* Container */
-.carousel {
+/* Carousel container */
+.footer {
     border-top: 2px solid var(--colour3);
     box-shadow: 0px 5px 30px var(--shadow);
     box-sizing: border-box;
     background-color: var(--background);
     padding: 10px;
-    height: 71px;
+    height: 5vh;
     overflow: hidden;
-
-    /* Center contents */
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* Makes carousel between sidebar and main */
-    z-index: 1;
-    
+    z-index: 2;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+/* Actual carousel */
+.carousel {
+    width: 90%;
+    max-width: 1640px;
+    height: var(--footlink-height);
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
+    /* Gradient mask at edges */
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+/* Pauses carousel when hovered over */
+.carousel:hover .carousel-image {
+    animation-play-state: paused;
+}
+.carousel-image {
+    width: var(--footlink-width);
+    height: var(--footlink-height);
+    position: absolute;
+    /* Spaces out links when viewport is too wide */
+    left: max(calc(var(--footlink-width) * var(--link-amount)), 100%);
+    /* Scroll animation */
+    animation-name: scrollLeft;
+    animation-duration: var(--carousel-duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes scrollLeft {
+    to {
+        left: calc(-1 * var(--footlink-width));
+    }
+}
+/* Distributes links */
+.item1 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 1) * -1);
+}
+.item2 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 2) * -1);
+}
+.item3 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 3) * -1);
+}
+.item4 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 4) * -1);
+}
+.item5 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 5) * -1);
+}
+.item6 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 6) * -1);
+}
+.item7 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 7) * -1);
+}
+.item8 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 8) * -1);
 }
 /* ===== CAROUSEL END ===== */
 
@@ -142,18 +206,18 @@ hr {
     box-shadow: 0 0 30px 5px var(--shadow);
     border-right: 2px solid var(--colour3);
     background-color: var(--background);
-    height: 100vh;
+    height: 95vh;
     width: 250px;
     padding: 5px;
-    z-index: 2;
+    z-index: 1;
     position: sticky;
     top: 0;
     align-self: start;
     overflow: hidden;
     text-wrap: nowrap;
-    padding-bottom: 80px; /* reserve space for anchored credit */
+    padding-bottom: 80px; /* reserve space for bottom contents */
 }
-/* Closed padding */
+/* Closed width */
 #sidebar.close {
     width: 60px;
 }
@@ -281,6 +345,9 @@ hr {
     border: none;
     height: 2px;
     background: var(--colour3);
+    /* Fade hr back in */
+    opacity: 100;
+    transition: 300ms ease-in-out;
 }
 #sidebar .sidebar-footer .footer-row {
     display: flex;
@@ -296,7 +363,7 @@ hr {
 /* Fade the credit text, list <span>, list, and <hr> when collapsed */
 #sidebar.close .sidebar-footer .credit, #sidebar.close .sidebar-footer hr, #sidebar.close a span, #sidebar.close .dropdown-button {
     opacity: 0;
-    transition: 300ms ease;
+    transition: 300ms ease-in-out;
 }
 /* Hide dropdown button when collapsed */
 #sidebar.close .dropdown-button {
@@ -336,7 +403,7 @@ hr {
     .container {
         padding: min(1em, 15%);
     }
-    .carousel {
+    .footer {
         display: none;
     }
 
