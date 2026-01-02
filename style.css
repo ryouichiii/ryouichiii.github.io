@@ -17,8 +17,8 @@
     /* Carousel link variables */
     --footlink-width: 88px;
     --footlink-height: 31px;
-    --carousel-duration: 30s;
-    --link-amount: 8;
+    --carousel-duration: 60s;
+    --link-amount: 34;
 }
 
 * {
@@ -196,6 +196,84 @@ hr {
 }
 .item8 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 8) * -1);
+}
+.item9 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 9) * -1);
+}
+.item10 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 10) * -1);
+}
+.item11 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 11) * -1);
+}
+.item12 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 12) * -1);
+}
+.item13 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 13) * -1);
+}
+.item14 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 14) * -1);
+}
+.item15 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 15) * -1);
+}
+.item16 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 16) * -1);
+}
+.item17 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 17) * -1);
+}
+.item18 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 18) * -1);
+}
+.item19 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 19) * -1);
+}
+.item20 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 20) * -1);
+}
+.item21 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 21) * -1);
+}
+.item22 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 22) * -1);
+}
+.item23 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 23) * -1);
+}
+.item24 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 24) * -1);
+}
+.item25 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 25) * -1);
+}
+.item26 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 26) * -1);
+}
+.item27 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 27) * -1);
+}
+.item28 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 28) * -1);
+}
+.item29 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 29) * -1);
+}
+.item30 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 30) * -1);
+}
+.item31 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 31) * -1);
+}
+.item32 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 32) * -1);
+}
+.item33 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 33) * -1);
+}
+.item34 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 34) * -1);
 }
 /* ===== CAROUSEL END ===== */
 
