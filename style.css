@@ -26,10 +26,51 @@
     padding: 0;
 }
 
-/* Font */
+/* Fonts */
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url(./fonts/SpaceGrotesk.ttf);
+}
+@font-face {
+    font-family: "GNKillGothicU";
+    src: url(./fonts/GNKillGothicU.ttf);
+}
 html {
-    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "SpaceGrotesk", sans-serif;
     line-height: 1.5;
+}
+/* Page title */
+h1 {
+    background: linear-gradient(0deg, var(--colour2), var(--colour1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--colour3);
+    background-clip: text;
+    font-family: "GNKillGothicU", sans-serif;
+    font-weight: initial;
+    font-size: calc(100% + 3vw);
+    text-align: center;
+}
+/* Page title subtitle */
+h2 {
+    background: linear-gradient(0deg, var(--colour2), var(--colour1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px var(--colour3);
+    background-clip: text;
+    font-family: "GNKillGothicU", sans-serif;
+    font-weight: initial;
+    font-size: calc(70% + 1.5vw);
+    letter-spacing: 20px;
+    margin-top: -10px;
+    text-align: center;
+}
+/* Content subtitle */
+h3{
+    margin: 20px;
+    color: var(--text);
+    text-align: center;
+    font-size: 25px;
 }
 
 body {
@@ -55,6 +96,7 @@ main {
 /* Paragraph margins */
 main p {
     color: var(--colour3);
+    text-align: center;
     margin-top: 5px;
     margin-bottom: 15px;
 }
@@ -65,6 +107,28 @@ hr {
     border-width: 0;
     background-color: var(--colour3);
 }
+main hr {
+    width: 100%;
+    margin: 30px
+}
+
+button {
+    background-color: var(--background);
+    border: 2px solid var(--colour3);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "GNKillGothicU", sans-serif;
+    font-size: medium;
+    color: var(--colour3);
+    -webkit-text-stroke: 1px var(--background);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--colour1);
+    transition: all 150ms ease;
+}
 
 .container {
     border: 2px solid var(--colour3);
@@ -73,7 +137,17 @@ hr {
     background-color: var(--background);
     margin-bottom: 20px;
     padding: min(3em, 15%);
-    max-width: 1000px;
+    max-width: 700px;
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 100%;
+}
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,6 +240,7 @@ hr {
     animation-duration: var(--carousel-duration);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 @keyframes scrollLeft {
     to {
@@ -303,13 +378,16 @@ hr {
 #sidebar ul {
     list-style: none;
 }
+#sidebar ul hr {
+    margin-bottom: 10px;
+}
 /* Sidebar logo formatting */
 #sidebar > ul > li:first-child {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
-    .logo {
-        font-weight: 600;
+    .logo-image {
+        width: 160px;
     }
 }
 /* Highlight current page in sidebar */
@@ -418,14 +496,14 @@ hr {
     padding-bottom: 10px;
     background: var(--background);
 }
-#sidebar .sidebar-footer hr {
-    margin: 0 0 .5em 0;
-    border: none;
+#sidebar .footer-hr {
+    position: absolute;
+    bottom: 60px;
     height: 2px;
     background: var(--colour3);
-    /* Fade hr back in */
-    opacity: 100;
-    transition: 300ms ease-in-out;
+    left: 5px;
+    right: 5px;
+    width: unset;
 }
 #sidebar .sidebar-footer .footer-row {
     display: flex;
@@ -439,7 +517,7 @@ hr {
     font-size: small;
 }
 /* Fade the credit text, list <span>, list, and <hr> when collapsed */
-#sidebar.close .sidebar-footer .credit, #sidebar.close .sidebar-footer hr, #sidebar.close a span, #sidebar.close .dropdown-button {
+#sidebar.close .sidebar-footer .credit, #sidebar.close a span, #sidebar.close .dropdown-button {
     opacity: 0;
     transition: 300ms ease-in-out;
 }
@@ -492,6 +570,12 @@ hr {
 @media(max-width: 800px) {
     body {
         grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 20px;
     }
     main {
         padding: 2em 1em 60pc 1em;
@@ -562,14 +646,14 @@ hr {
             border-radius: 0;
             justify-content: center;
         }
-        /* Removes logo, text, credit and dropdown (dropdown button was mean to me)*/
-        ul li hr, ul li a span, ul li div span, ul li:first-child, ul .dropdown-button, ul .sub-menu, ul li div img {
+        /* Hide shit!! (dropdown button was mean to me)*/
+        ul li hr, ul li a span, ul li div span, ul li:first-child, ul .dropdown-button, ul .sub-menu, ul li div img, ul hr {
             display: none;
         }
-    }
     /* ===== MOBILE SIDEBAR END ===== */
 
     #preloader {
         background-size: 25%;
+    }
     }
 }
