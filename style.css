@@ -18,7 +18,7 @@
     --footlink-width: 88px;
     --footlink-height: 31px;
     --carousel-duration: 60s;
-    --link-amount: 34;
+    --link-amount: 35;
 }
 
 * {
@@ -101,7 +101,6 @@ main p {
     margin-bottom: 15px;
 }
 
-/* Text break style */
 hr {
     height:2px;
     border-width: 0;
@@ -119,10 +118,11 @@ button {
     padding: 10px;
     font-family: "GNKillGothicU", sans-serif;
     font-size: medium;
+    font-weight: 600;
     color: var(--colour3);
     -webkit-text-stroke: 1px var(--background);
-    text-align: center;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
     overflow-x: hidden;
     cursor: pointer;
 }
@@ -339,6 +339,9 @@ button:hover {
 }
 .item34 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 34) * -1);
+}
+.item35 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 35) * -1);
 }
 /* ===== CAROUSEL END ===== */
 
