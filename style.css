@@ -123,6 +123,7 @@ button {
     -webkit-text-stroke: 1px var(--background);
     text-align: center;
     text-decoration: none;
+    overflow-x: hidden;
     cursor: pointer;
 }
 button:hover {
