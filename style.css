@@ -48,7 +48,7 @@ h1 {
     background-clip: text;
     font-family: "GNKillGothicU", sans-serif;
     font-weight: initial;
-    font-size: calc(100% + 3vw);
+    font-size: 60px;
     text-align: center;
 }
 /* Page title subtitle */
@@ -60,7 +60,7 @@ h2 {
     background-clip: text;
     font-family: "GNKillGothicU", sans-serif;
     font-weight: initial;
-    font-size: calc(70% + 1.5vw);
+    font-size: 25px;
     letter-spacing: 20px;
     margin-top: -10px;
     text-align: center;
@@ -71,6 +71,10 @@ h3{
     color: var(--text);
     text-align: center;
     font-size: 25px;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -143,6 +147,36 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.utau-container {
+    border: 2px solid var(--colour3);
+    box-shadow: 0 0 10px 5px var(--shadow);
+    border-radius: 1em;
+    background-color: var(--background);
+    margin: 20px 10px 0px 10px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    hr {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    h3 {
+        font-family: "GNKillGothicU", sans-serif;
+        font-weight: initial;
+        font-size: 25px;
+        color: var(--colour3);
+        margin-top: 10px;
+        text-align: center;
+    }
 }
 
 /* ===== THEMES ===== */
@@ -383,6 +417,10 @@ button:hover {
         width: 160px;
     }
 }
+#toggle-button {
+    flex-shrink: 0;
+    width: 48px;
+}
 /* Highlight current page in sidebar */
 #sidebar ul li.active a {
     color: var(--colour2);
@@ -565,10 +603,12 @@ button:hover {
         grid-template-columns: 1fr;
     }
     h1 {
-        font-size: 40px;
+        font-size: 35px;
+        -webkit-text-stroke: 1.5px var(--colour3)
     }
     h2 {
-        font-size: 20px;
+        font-size: 15px;
+        -webkit-text-stroke: 1px var(--colour3)
     }
     main {
         padding: 2em 1em 60pc 1em;
@@ -579,7 +619,8 @@ button:hover {
         margin-right: 40px;
     }
     .container {
-        padding: min(1em, 15%);
+        padding-left: min(1em, 15%);
+        padding-right: min(1em, 15%);
     }
     .footer {
         display: none;
