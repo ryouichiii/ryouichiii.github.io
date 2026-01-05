@@ -6,6 +6,7 @@
     --colour2: #66cc86;
     --colour3: #3d8567;
     --shadow: #1f515141;
+    --glow: #f7fff3;
 
     /* Apply Background */
     background-image: url(./images/bg.webp);
@@ -83,6 +84,7 @@ body {
     color: var(--text);
     display: grid;
     grid-template-columns: auto 1fr;
+    overflow-x: hidden;
 }
 
 /* Main alignment */
@@ -129,15 +131,18 @@ button {
     justify-content: center;
     overflow-x: hidden;
     cursor: pointer;
+    transition: all 150ms ease;
 }
 button:hover {
     background-color: var(--colour1);
+    box-shadow: 0 5px 10px 0px var(--shadow);
     transition: all 150ms ease;
+    transform: translateY(-5px)
 }
 
 .container {
     border: 2px solid var(--colour3);
-    box-shadow: 0 0 10px 5px var(--shadow);
+    box-shadow: 0 0 10px 0px var(--shadow);
     border-radius: 1em;
     background-color: var(--background);
     margin-bottom: 20px;
@@ -151,7 +156,7 @@ button:hover {
 
 .utau-container {
     border: 2px solid var(--colour3);
-    box-shadow: 0 0 10px 5px var(--shadow);
+    box-shadow: 0 0 10px 0px var(--shadow);
     border-radius: 1em;
     background-color: var(--background);
     margin: 20px 10px 0px 10px;
@@ -161,6 +166,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: all 200ms ease;
     hr {
         margin-top: 0;
         margin-bottom: 10px;
@@ -172,11 +178,19 @@ button:hover {
     h3 {
         font-family: "GNKillGothicU", sans-serif;
         font-weight: initial;
+        -webkit-text-stroke: 1px var(--background);
         font-size: 25px;
         color: var(--colour3);
         margin-top: 10px;
         text-align: center;
     }
+}
+.utau-container:hover {
+    background-color: var(--colour1);
+    box-shadow: 0 0 30px 5px var(--glow);
+    border: 4px solid #ffffff;
+    transition: all 200ms ease;
+    transform: scale(1.05)
 }
 
 .utau-list {
@@ -210,7 +224,8 @@ button:hover {
     --colour1: #1f5151;
     --colour2: #66cc86;
     --colour3: #d5edab;
-    --shadow: #d5edab80;
+    --shadow: #000000b7;
+    --glow: #cfffb3;
     background-image: url(./images/bg-dark.webp);
     background-color: var(--background);
     background-size:cover;
@@ -297,108 +312,248 @@ button:hover {
 /* Distributes links */
 .item1 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 1) * -1);
+    transition: all 200ms ease;
+}
+.item1:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item2 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 2) * -1);
+    transition: all 200ms ease;
+}
+.item2:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item3 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 3) * -1);
+    transition: all 200ms ease;
+}
+.item3:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item4 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 4) * -1);
+    transition: all 200ms ease;
+}
+.item4:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item5 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 5) * -1);
+    transition: all 200ms ease;
+}
+.item5:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item6 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 6) * -1);
+    transition: all 200ms ease;
+}
+.item6:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item7 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 7) * -1);
+    transition: all 200ms ease;
+}
+.item7:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item8 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 8) * -1);
+    transition: all 200ms ease;
+}
+.item8:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item9 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 9) * -1);
+    transition: all 200ms ease;
+}
+.item9:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item10 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 10) * -1);
+    transition: all 200ms ease;
+}
+.item10:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item11 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 11) * -1);
+    transition: all 200ms ease;
+}
+.item11:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item12 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 12) * -1);
+    transition: all 200ms ease;
+}
+.item12:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item13 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 13) * -1);
+    transition: all 200ms ease;
+}
+.item13:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item14 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 14) * -1);
+    transition: all 200ms ease;
+}
+.item14:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item15 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 15) * -1);
+    transition: all 200ms ease;
+}
+.item15:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item16 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 16) * -1);
+    transition: all 200ms ease;
+}
+.item16:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item17 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 17) * -1);
+    transition: all 200ms ease;
+}
+.item17:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item18 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 18) * -1);
+    transition: all 200ms ease;
+}
+.item18:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item19 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 19) * -1);
+    transition: all 200ms ease;
+}
+.item19:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item20 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 20) * -1);
+    transition: all 200ms ease;
+}
+.item20:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item21 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 21) * -1);
+    transition: all 200ms ease;
+}
+.item21:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item22 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 22) * -1);
+    transition: all 200ms ease;
+}
+.item22:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item23 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 23) * -1);
+    transition: all 200ms ease;
+}
+.item23:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item24 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 24) * -1);
+    transition: all 200ms ease;
+}
+.item24:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item25 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 25) * -1);
+    transition: all 200ms ease;
+}
+.item25:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item26 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 26) * -1);
+    transition: all 200ms ease;
+}
+.item26:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item27 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 27) * -1);
+    transition: all 200ms ease;
+}
+.item27:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item28 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 28) * -1);
+    transition: all 200ms ease;
+}
+.item28:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item29 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 29) * -1);
+    transition: all 200ms ease;
+}
+.item29:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item30 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 30) * -1);
+    transition: all 200ms ease;
+}
+.item30:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item31 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 31) * -1);
+    transition: all 200ms ease;
+}
+.item31:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item32 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 32) * -1);
+    transition: all 200ms ease;
+}
+.item32:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item33 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 33) * -1);
+    transition: all 200ms ease;
+}
+.item33:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item34 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 34) * -1);
+    transition: all 200ms ease;
+}
+.item34:hover {
+    filter: brightness(125%) saturate(75%);
 }
 .item35 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 35) * -1);
+    transition: all 200ms ease;
+}
+.item35:hover {
+    filter: brightness(125%) saturate(75%);
 }
 /* ===== CAROUSEL END ===== */
 
@@ -406,7 +561,7 @@ button:hover {
 /* Sidebar container */
 #sidebar {
     box-sizing: border-box;
-    box-shadow: 0 0 30px 5px var(--shadow);
+    box-shadow: 0 0 30px 0px var(--shadow);
     border-right: 2px solid var(--colour3);
     background-color: var(--background);
     height: calc(100vh - 50px);
@@ -420,10 +575,6 @@ button:hover {
     text-wrap: nowrap;
     padding-bottom: 80px; /* reserve space for bottom contents */
 }
-/* Closed width */
-#sidebar.close {
-    width: 60px;
-}
 /* Removes sidebar bullet-points */
 #sidebar ul {
     list-style: none;
@@ -434,15 +585,12 @@ button:hover {
 /* Sidebar logo formatting */
 #sidebar > ul > li:first-child {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
+    justify-content: center;
+    margin-bottom: 5px;
+    transition: all 150ms ease;
     .logo-image {
-        width: 160px;
+        width: 190px;
     }
-}
-#toggle-button {
-    flex-shrink: 0;
-    width: 48px;
 }
 /* Highlight current page in sidebar */
 #sidebar ul li.active a {
@@ -467,7 +615,7 @@ button:hover {
     align-items: center;
     gap: 1em;
     /* Hover exit ease out animation */
-    transition: background-color 300ms ease-out;
+    transition: background-color, padding 200ms ease-out;
 }
 
 /* Puts dropdown next to UTAU link */
@@ -475,7 +623,6 @@ button:hover {
     display: inline-flex;
 }
 #sidebar .dropdown-button {
-    /* Add this line to make the dropdown button appear next to the link */
     margin-left: 0;
 }
 
@@ -495,9 +642,26 @@ button:hover {
     fill: var(--colour3);
 }
 /* Change colour on hover */
-#sidebar a:hover, #sidebar .dropdown-button:hover, #sidebar .theme-toggle:hover, #toggle-button:hover{
+#sidebar a:hover, #sidebar .dropdown-button:hover, #sidebar .theme-toggle:hover {
     background-color: var(--colour1);
     transition: all 150ms ease;
+    /* Don't apply button animation */
+    box-shadow: none;
+    transition: all 150ms ease;
+    transform: translateY(0px)
+}
+/* Indent when hovered */
+#sidebar > ul > li > a:hover{
+    padding-left: 25px;
+}
+#sidebar > ul > li > span > a:hover{
+    padding-left: 25px;
+}
+/* Different animation for logo */
+#sidebar > ul > li:first-child:hover {
+    padding-left: 0px;
+    transition: all 150ms ease;
+    transform: scale(1.1);
 }
 /* Hide dropdown contents by default */
 #sidebar .sub-menu {
@@ -538,11 +702,6 @@ button:hover {
         transition: rotate 200ms ease-in-out;
     }
 }
-
-/* Toggle animation */
-#sidebar.animate {
-    transition: width 300ms ease-in-out;
-}
 /* Sidebar footer (hr + theme toggle + credit) */
 #sidebar .sidebar-footer {
     position: absolute;
@@ -569,15 +728,6 @@ button:hover {
     margin-right: 16px;
     color: var(--colour3);
     font-size: small;
-}
-/* Fade the credit text, list <span>, list, and <hr> when collapsed */
-#sidebar.close .sidebar-footer .credit, #sidebar.close a span, #sidebar.close .dropdown-button {
-    opacity: 0;
-    transition: 300ms ease-in-out;
-}
-/* Hide dropdown button when collapsed */
-#sidebar.close .dropdown-button {
-    display: none;
 }
 #sidebar .fumo {
     width: 50px;
@@ -710,6 +860,13 @@ button:hover {
         /* Hide shit!! (dropdown button was mean to me)*/
         ul li hr, ul li a span, ul li div span, ul li:first-child, ul .dropdown-button, ul .sub-menu, ul li div img, ul hr {
             display: none;
+        }
+        /* Don't indent when hovered */
+        > ul > li > a:hover {
+            padding-left: 0px;
+        }
+        > ul > li > span > a:hover {
+            padding-left: 0px;
         }
     /* ===== MOBILE SIDEBAR END ===== */
 
