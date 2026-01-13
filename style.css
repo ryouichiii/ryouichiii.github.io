@@ -314,9 +314,10 @@ button:active {
         width: 50%;
         height: 50%;
     }
-    /* Mobile height */
+    /* Mobile scaling */
     @media (max-height: 700px) {
         width: 80vh;
+        max-width: 80vw;
     }
 }
 
