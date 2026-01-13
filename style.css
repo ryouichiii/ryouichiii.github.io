@@ -518,7 +518,9 @@ button:active {
 }
 .item35 {
     animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 35) * -1);
-    
+}
+.item36 {
+    animation-delay: calc(var(--carousel-duration) / var(--link-amount) * (var(--link-amount) - 36) * -1);
 }
 /* ===== CAROUSEL END ===== */
 
