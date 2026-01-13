@@ -222,6 +222,7 @@ button:active {
     padding: 0;
     align-items: center;
     overflow: hidden;
+    transition: all 200ms ease;
     h1 {
         background: linear-gradient(0deg, var(--colour2), var(--colour1));
         -webkit-background-clip: text;
@@ -239,6 +240,12 @@ button:active {
         text-align: unset;
         font-size: 15px;
     }
+}
+.ust-list-container:hover {
+    box-shadow: 0 0 30px 5px var(--glow);
+    border: 4px solid #ffffff;
+    transition: all 200ms ease;
+    transform: scale(1.02)
 }
 .ust-list-contents {
     display: grid;
