@@ -298,15 +298,14 @@ button:active {
     border-top: 2px solid var(--colour3);
     grid-area: buttons;
 }
-
 .index-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
     max-width: 700px;
-    row-gap: 10px;
-    margin: 20px;
+    margin: 40px;
     img {
         width: 100%;
         height: 100%;
@@ -314,6 +313,10 @@ button:active {
     a {
         width: 50%;
         height: 50%;
+    }
+    /* Mobile height */
+    @media (max-height: 700px) {
+        width: 80vh;
     }
 }
 
@@ -675,7 +678,8 @@ button:active {
 #sidebar .sidebar-footer {
     position: absolute;
     bottom: 0px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 9px;
     background: var(--background);
 }
 #sidebar .footer-hr {
