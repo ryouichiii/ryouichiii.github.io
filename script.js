@@ -4,6 +4,8 @@ const yearElement = document.getElementById('year');
 const themeToggle = document.getElementById('themeToggle');
 const currentTheme = localStorage.getItem('theme');
 const body = document.body;
+const terms = document.getElementById('terms');
+const agree = document.getElementById('agree');
 
 /* Preloader */
 var loader = document.getElementById("preloader");
@@ -67,6 +69,11 @@ if (window.location && window.location.pathname && window.location.pathname.inde
         if (btn && btn.classList && btn.classList.contains('dropdown-button')) btn.classList.add('rotate')
     }
 }
+
+/* Close commission terms modal when agreed to */
+agree.addEventListener('click', () => {
+    terms.classList.add('agreed');
+});
 
 /* Grab current year */
 yearElement.textContent = currentYear;

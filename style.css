@@ -313,12 +313,53 @@ button:active {
     a {
         width: 50%;
         height: 50%;
+        transition: all 200ms ease;
+    }
+    a:hover {
+        transform: scale(1.05);
+    }
+    a:active {
+        transform: scale(.95);
+        filter: brightness(.9);
     }
     /* Mobile scaling */
     @media (max-height: 700px) {
         width: 80vh;
         max-width: 80vw;
     }
+}
+
+.terms-container {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--shadow);
+    backdrop-filter: blur(5px);
+    opacity: 100;
+    transition: opacity 300ms ease;
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.terms-container.agreed {
+    opacity: 0;
+    pointer-events: none;
+}
+.terms {
+    border: 2px solid var(--colour3);
+    box-shadow: 0 0 10px 0px var(--shadow);
+    border-radius: 1em;
+    background-color: var(--background);
+    padding: min(3em, 15%);
+    max-width: 500px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ===== THEMES ===== */
