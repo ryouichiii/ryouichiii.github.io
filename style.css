@@ -554,6 +554,10 @@ button:active {
     animation-iteration-count: infinite;
     cursor: pointer;
 }
+.carousel-image a img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
 @keyframes scrollLeft {
     to {
         left: calc(-1 * var(--footlink-width));
@@ -706,6 +710,8 @@ button:active {
     transition: all 150ms ease;
     .logo-image {
         width: 190px;
+        user-select: none;
+        -webkit-user-drag: none;
     }
 }
 /* Highlight current page in sidebar */
@@ -859,6 +865,8 @@ button:active {
     position: absolute;
     bottom: 60px;
     right: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
