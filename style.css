@@ -387,18 +387,11 @@ button:active {
 }
 .comm-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     justify-content: center;
     gap: 10px;
     margin: 20px;
     margin-top: 0px;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        user-select: none;
-        -webkit-user-drag: none;
-    }
 }
 .comm-image {
     border: 2px solid var(--colour3);
@@ -406,9 +399,14 @@ button:active {
     border-radius: 1em;
     overflow: hidden;
     transition: all 200ms ease;
-    width: 100%;
-    height: 100%;
     cursor: pointer;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
 }
 .comm-image:hover {
     box-shadow: 0 0 30px 5px var(--glow);
@@ -464,7 +462,7 @@ button:active {
     img {
         max-width: 1080px;
         width: 100%;
-        max-height: 1080px;
+        max-height: 80vh;
         height: 100%;
         object-fit: cover;
         box-shadow: 0 0 30px 5px var(--shadow);
