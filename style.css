@@ -2,6 +2,7 @@
     /* Light mode colours */
     --text: #1f5151;
     --background: #feffeb;
+    --bg: url(./images/bg.webp);
     --colour1: #d5edab;
     --colour2: #66cc86;
     --colour3: #3d8567;
@@ -12,13 +13,6 @@
     --utauborder: #f0a2c9;
     --diffsinger: #bfc5ff;
     --diffsingerborder: #b5a6ee;
-
-    /* Apply Background */
-    background-image: url(./images/bg.webp);
-    background-color: var(--background);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 
     /* Carousel link variables */
     --footlink-width: 88px;
@@ -149,6 +143,17 @@ button:active {
     transform: translateY(0px)
 }
 
+.bg {
+    background-image: var(--bg);
+    background-color: var(--background);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+}
+
 /* Default content container */
 .container {
     border: 2px solid var(--colour3);
@@ -167,6 +172,9 @@ button:active {
 .bottom-page-spacer {
     margin-bottom: 20px; 
     opacity: 0;
+}
+.top-page-spacer {
+    display: none;
 }
 
 /* ===== UTAU ===== */
@@ -192,7 +200,7 @@ button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, var(--shadow));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, var(--colour1));
 }
 .utau-container:hover {
     box-shadow: 0 0 30px 5px var(--glow);
@@ -585,7 +593,7 @@ button:active {
     --colour3: #d5edab;
     --shadow: #000000b7;
     --glow: #cfffb3;
-    background-image: url(./images/bg-dark.webp);
+    --bg: url(./images/bg-dark.webp);
     background-color: var(--background);
     background-size:cover;
     background-repeat: no-repeat;
@@ -1033,8 +1041,17 @@ button:active {
         padding-left: min(1em, 15%);
         padding-right: min(1em, 15%);
     }
-    .bottom-page-spacer {
-        margin-bottom: 90px; 
+    .top-page-spacer {
+        display: block;
+        margin-bottom: 0px; 
+        opacity: 0;
+    }
+    /* Move carousel to top */
+    .footer {
+        height: 35px;
+        top: 0;
+        border-top: none;
+        border-bottom: 2px solid var(--colour3);
     }
     .utau-list {
         grid-template-columns: 100%;
@@ -1064,6 +1081,7 @@ button:active {
     }
     .popup-container span {
         right: 30px;
+        top: 35px;
     }
     .popup-image {
         margin: 0px;
@@ -1081,7 +1099,7 @@ button:active {
     /* ===== MOBILE SIDEBAR ===== */
     #sidebar {
         /* Moves sidebar to bottom */
-        height: 110px;
+        height: 60px;
         width: 100%;
         border-right: none;
         border-top: 2px solid var(--colour3);
