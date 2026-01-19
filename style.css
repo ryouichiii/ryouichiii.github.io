@@ -164,6 +164,10 @@ button:active {
     justify-content: center;
     align-items: center;
 }
+.bottom-page-spacer {
+    margin-bottom: 20px; 
+    opacity: 0;
+}
 
 /* ===== UTAU ===== */
 .utau-container {
@@ -402,6 +406,7 @@ button:active {
     justify-content: flex-start;
     align-items: center;
     overflow-y: scroll;
+    overflow-x: hidden;
     z-index: 1;
 }
 .terms-container.agreed {
@@ -1017,7 +1022,7 @@ button:active {
         -webkit-text-stroke: 1px var(--colour3)
     }
     main {
-        padding: 2em 1em 60pc 1em;
+        padding: 2em 1em 2em 1em;
         max-width: auto;
     }
     .container p {
@@ -1028,8 +1033,8 @@ button:active {
         padding-left: min(1em, 15%);
         padding-right: min(1em, 15%);
     }
-    .footer {
-        display: none;
+    .bottom-page-spacer {
+        margin-bottom: 90px; 
     }
     .utau-list {
         grid-template-columns: 100%;
@@ -1076,7 +1081,7 @@ button:active {
     /* ===== MOBILE SIDEBAR ===== */
     #sidebar {
         /* Moves sidebar to bottom */
-        height: 60px;
+        height: 110px;
         width: 100%;
         border-right: none;
         border-top: 2px solid var(--colour3);
@@ -1127,7 +1132,7 @@ button:active {
             border-radius: 0;
             justify-content: center;
         }
-        /* Hide shit!! (dropdown button was mean to me)*/
+        /* Hide shit!! */
         ul li hr, ul li a span, ul li div span, ul li:first-child, ul .dropdown-button, ul .sub-menu, ul li div img, ul hr {
             display: none;
         }
@@ -1138,10 +1143,10 @@ button:active {
         > ul > li > span > a:hover {
             padding-left: 0px;
         }
+    }
     /* ===== MOBILE SIDEBAR END ===== */
 
     #preloader {
         background-size: 25%;
-    }
     }
 }
