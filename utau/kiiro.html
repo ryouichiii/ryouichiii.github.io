@@ -15,7 +15,7 @@
         <link rel="manifest" href="../favicon/kiiro/site.webmanifest">
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="./kiiro.css" media="screen">
 
         <!-- JS -->
         <script type="text/javascript" src="../script.js" defer></script>
@@ -24,99 +24,10 @@
         <!-- Page Loader -->
         <div id="preloader"></div>
 
-        <!-- Navigation Bar -->
-        <aside id="sidebar">
-            <!-- Site List -->
-            <ul>
-                <!-- Logo -->
-                <li>
-                    <span class="logo">
-                        <div>
-                            <a href="secret-index.html">
-                                <img src="../images/logo.webp" alt="logo" class="logo-image">
-                            </a>
-                        </div>
-                    </span>
-                </li>
-                <hr>
-                <!-- About Me Button -->
-                <li>
-                    <a href="../about.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-240q-56 0-107 17.5T280-170v10h400v-10q-42-35-93-52.5T480-240Zm0-80q69 0 129 21t111 59v-560H240v560q51-38 111-59t129-21Zm0-160q-25 0-42.5-17.5T420-540q0-25 17.5-42.5T480-600q25 0 42.5 17.5T540-540q0 25-17.5 42.5T480-480ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h480q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm240-320q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm0-140Z"/></svg>
-                        <span>About Me</span>
-                    </a>
-                </li>
-                <!-- My UTAUs Dropdown (Active) -->
-                <li>
-                    <!-- Link to dedicated UTAU page -->
-                    <span>
-                        <a href="../utau.html">
-                            <svg style="fill: var(--colour2);" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M740-560h140v80h-80v220q0 42-29 71t-71 29q-42 0-71-29t-29-71q0-42 29-71t71-29q8 0 18 1.5t22 6.5v-208ZM120-160v-112q0-35 17.5-63t46.5-43q62-31 126-46.5T440-440q42 0 83.5 6.5T607-414q-20 12-36 29t-28 37q-26-6-51.5-9t-51.5-3q-57 0-112 14t-108 40q-9 5-14.5 14t-5.5 20v32h321q2 20 9.5 40t20.5 40H120Zm320-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0-80Zm0 400Z"/></svg>
-                            <span style="color: var(--colour2);">My UTAUs</span>
-                        </a>
-                    </span>
-                    <!-- Dropdown button -->
-                    <button onclick=toggleSubMenu(this) class="dropdown-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                    </button>
-                    <!-- Dropdown contents -->
-                    <ul class="sub-menu">
-                        <div>
-                            <li class="active"><a href="./kiiro.html">Hikuine Kiiro</a></li>
-                            <li><a href="./cecil.html">CECIL</a></li>
-                            <li><a href="./kazuya.html">Oguma Kazuya</a></li>
-                            <li><a href="./miyuki.html">Shohei Miyuki</a></li>
-                        </div>
-                    </ul>
-                </li>
-                <!-- My USTs Button -->
-                <li>
-                    <a href="../ust.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M430-200q38 0 64-26t26-64v-150h120v-80H480v155q-11-8-23.5-11.5T430-380q-38 0-64 26t-26 64q0 38 26 64t64 26ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
-                        <span>My USTs</span>
-                    </a>
-                </li>
-                <!-- Art Commissions Button -->
-                <li>
-                    <a href="../comm.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-120q-45 0-89-22t-71-58q26 0 53-20.5t27-59.5q0-50 35-85t85-35q50 0 85 35t35 85q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 23-5.5 42T220-202q5 2 10 2h10Zm230-160L360-470l358-358q11-11 27.5-11.5T774-828l54 54q12 12 12 28t-12 28L470-360Zm-190 80Z"/></svg>
-                        <span>Art Commissions</span>
-                    </a>
-                </li>
-                <!-- Links Button -->
-                <li>
-                    <a href="../links.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/></svg>
-                        <span>Links</span>
-                    </a>
-                </li>
-                <hr class="footer-hr">
-                <!-- Credit at bottom of sidebar + Theme switcher -->
-                <li class="sidebar-footer">
-                    <div class="footer-row">
-                        <img src="../images/fumo.webp" alt="fumo kiiro" class="fumo">
-                        <button class="theme-toggle" id="themeToggle">
-                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
-                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
-                        </button>
-                        <span class="credit">© ryouichi <span id="year"></span></span>
-                    </div>
-                </li>
-            </ul>
-        </aside>
-
         <div>
             <!-- Background -->
-            <div class="bg">
-                <div class="bg-cloud">
-                    <img src="" class="cloud1 cloudreplace">
-                    <img src="" class="cloud2 cloudreplace">
-                    <img src="" class="cloud3 cloudreplace">
-                    <img src="" class="cloud4 cloudreplace">
-                    <img src="" class="cloud5 cloudreplace">
-                    <img src="" class="cloud6 cloudreplace">
-                </div>
-            </div>
+            <div class="bg"></div>
+
             <!-- Page Content -->
             <main>
                 <div class="container">
