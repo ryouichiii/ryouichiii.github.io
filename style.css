@@ -941,6 +941,7 @@ button:active {
 }
 #sidebar .dropdown-button {
     margin-left: 0;
+    display: none; /* ------ DELETE WHEN UTAU PAGES ARE FINISHED ------ */
 }
 
 /* Dropdown + Theme toggle Style */
