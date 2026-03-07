@@ -37,9 +37,29 @@ function updateCloud() {
     });
 }
 
+/* Link images theme swapping */
+function updateLinkImages() {
+    const linkImages = document.querySelectorAll('.link-container img');
+    const isDarkMode = body.classList.contains('dark-mode');
+    linkImages.forEach(img => {
+        const src = img.src;
+        if (isDarkMode) {
+            // Switch to dark mode image
+            img.src = src.replace(/\.webp$/, '-dark.webp');
+        } else {
+            // Switch back to light mode image
+            img.src = src.replace(/-dark\.webp$/, '.webp');
+        }
+    });
+}
+
 
 /* Add listener for theme toggle */
 themeToggle.addEventListener('click', () => {
+    // Show preloader
+    loader.style.display = 'flex';
+    loader.style.opacity = '1';
+    
     body.classList.toggle('dark-mode');
     /* Save theme prefs */
     if (body.classList.contains('dark-mode')) {
@@ -48,12 +68,59 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', '');
     }
     updateCloud(); // Changes clouds to specific theme
+    updateLinkImages(); // Changes link images to specific theme
+    
+    // Hide preloader after images load
+    const allImages = document.querySelectorAll('img');
+    let loadedCount = 0;
+    const totalImages = allImages.length;
+    
+    const hidePreloader = () => {
+        var s = loader.style;
+        var intervalId = setInterval(function(){
+            s.opacity -= 0.1;
+            if (s.opacity <= 0) {
+                clearInterval(intervalId);
+                loader.style.display = "none";
+            }
+        }, 40);
+    };
+    
+    // If no images, hide immediately
+    if (totalImages === 0) {
+        hidePreloader();
+        return;
+    }
+    
+    allImages.forEach(img => {
+        if (img.complete) {
+            loadedCount++;
+        } else {
+            img.addEventListener('load', () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    hidePreloader();
+                }
+            });
+            img.addEventListener('error', () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    hidePreloader();
+                }
+            });
+        }
+    });
+    
+    if (loadedCount === totalImages) {
+        hidePreloader();
+    }
 });
 /* Check for locally saved theme preference */
 if (currentTheme) {
     body.classList.add(currentTheme);
 }
 updateCloud(); // Changes clouds to already saved theme
+updateLinkImages(); // Changes link images to already saved theme
 
 /* Dropdown function */
 function toggleSubMenu(button) {

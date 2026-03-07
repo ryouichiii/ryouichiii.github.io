@@ -22,6 +22,20 @@
 
     /* Cloud background animation variable */
     --cloud-duration: 50s;
+
+    /* Links light mode icons */
+    --bluesky: url(./images/links/bluesky.webp);
+    --twitter: url(./images/links/twitter.webp);
+    --telegram: url(./images/links/telegram.webp);
+    --tumblr: url(./images/links/tumblr.webp);
+    --instagram: url(./images/links/instagram.webp);
+    --newgrounds: url(./images/links/newgrounds.webp);
+    --cara: url(./images/links/cara.webp);
+    --vgen: url(./images/links/vgen.webp);
+    --youtube: url(./images/links/youtube.webp);
+    --niconico: url(./images/links/niconico.webp);
+    --bilibili: url(./images/links/bilibili.webp);
+    --kofi: url(./images/links/kofi.webp);
 }
 
 * {
@@ -467,6 +481,7 @@ button:active {
     }
     a:hover {
         transform: scale(1.05);
+        filter: brightness(1.1);
     }
     a:active {
         transform: scale(.95);
@@ -676,6 +691,19 @@ button:active {
     --shadow: #000000b7;
     --glow: #cfffb3;
     --bg: url(./images/bg-dark.webp);
+    /* Dark mode link icon images */
+    --bluesky: url(./images/links/bluesky-dark.webp);
+    --twitter: url(./images/links/twitter-dark.webp);
+    --telegram: url(./images/links/telegram-dark.webp);
+    --tumblr: url(./images/links/tumblr-dark.webp);
+    --instagram: url(./images/links/instagram-dark.webp);
+    --newgrounds: url(./images/links/newgrounds-dark.webp);
+    --cara: url(./images/links/cara-dark.webp);
+    --vgen: url(./images/links/vgen-dark.webp);
+    --youtube: url(./images/links/youtube-dark.webp);
+    --niconico: url(./images/links/niconico-dark.webp);
+    --bilibili: url(./images/links/bilibili-dark.webp);
+    --kofi: url(./images/links/kofi-dark.webp);
     background-color: var(--background);
     background-size:cover;
     background-repeat: no-repeat;
