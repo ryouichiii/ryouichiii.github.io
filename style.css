@@ -62,6 +62,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px var(--colour3);
+    paint-order: stroke;
     background-clip: text;
     font-family: "GNKillGothicU", sans-serif;
     font-weight: initial;
@@ -74,6 +75,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px var(--colour3);
+    paint-order: stroke;
     background-clip: text;
     font-family: "GNKillGothicU", sans-serif;
     font-weight: initial;
@@ -284,10 +286,6 @@ button:active {
     overflow: hidden;
     transition: all 200ms ease;
     position: relative;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
 }
 .utau-container::after {
     content: "";
@@ -296,7 +294,8 @@ button:active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, var(--colour1));
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, #fff);
 }
 .utau-container:hover {
     box-shadow: 0 0 30px 5px var(--glow);
@@ -304,11 +303,28 @@ button:active {
     transition: all 200ms ease;
     transform: scale(1.05)
 }
+.utau-container:hover .utau-hover {
+    opacity: 1;
+    transition: all 200ms ease;
+}
 .utau-container:active {
     box-shadow: 0 0 30px 5px var(--glow);
     border: 4px solid #ffffff;
     transition: all 200ms ease;
     transform: scale(.95)
+}
+.utau-image {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+.utau-hover {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 200ms ease;
 }
 .utau-info {
     position: absolute;
@@ -319,7 +335,7 @@ button:active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 2;
 }
 .utau-info-bottom {
     margin-left: 20px;
@@ -331,12 +347,14 @@ button:active {
     line-height: 25px;
     p {
         text-align: left;
-        text-shadow: 0 2px 2px var(--shadow);
+        -webkit-text-stroke: 4px var(--background);
+        paint-order: stroke;
     }
     h3 {
         text-align: left;
         font-size: clamp(25px, 3vw, 35px);
-        text-shadow: 0 2px 2px var(--shadow);
+        -webkit-text-stroke: 4px var(--background);
+        paint-order: stroke;
     }
 }
 .utau-info-top {
@@ -384,6 +402,7 @@ button:active {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1.5px var(--colour3);
+        paint-order: stroke;
         background-clip: text;
         font-family: "GNKillGothicU", sans-serif;
         font-weight: initial;
@@ -598,6 +617,7 @@ button:active {
     top: 10px;
     right: 160px;
     -webkit-text-stroke: 2px var(--colour1);
+    paint-order: stroke;
     text-shadow: 0px 0px 5px var(--text);
     font-size: 40px;
     font-weight: bolder;
@@ -652,6 +672,7 @@ button:active {
     h1 {
         font-size: 22.5px;
         -webkit-text-stroke: 1.5px var(--colour3);
+        paint-order: stroke;
     }
     h3 {
         font-size: 12.5px;
@@ -691,7 +712,6 @@ button:active {
     --shadow: #000000b7;
     --glow: #cfffb3;
     --bg: url(./images/bg-dark.webp);
-    /* Dark mode link icon images */
     --bluesky: url(./images/links/bluesky-dark.webp);
     --twitter: url(./images/links/twitter-dark.webp);
     --telegram: url(./images/links/telegram-dark.webp);
@@ -704,6 +724,7 @@ button:active {
     --niconico: url(./images/links/niconico-dark.webp);
     --bilibili: url(./images/links/bilibili-dark.webp);
     --kofi: url(./images/links/kofi-dark.webp);
+
     background-color: var(--background);
     background-size:cover;
     background-repeat: no-repeat;
@@ -1134,11 +1155,13 @@ button:active {
     }
     h1 {
         font-size: 35px;
-        -webkit-text-stroke: 1.5px var(--colour3)
+        -webkit-text-stroke: 1.5px var(--colour3);
+        paint-order: stroke;
     }
     h2 {
         font-size: 15px;
-        -webkit-text-stroke: 1px var(--colour3)
+        -webkit-text-stroke: 1px var(--colour3);
+        paint-order: stroke;
     }
     main {
         padding: 2em 1em 2em 1em;

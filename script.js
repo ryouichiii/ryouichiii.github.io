@@ -13,7 +13,7 @@ const popupImage = document.getElementById('popup-image');
 const cloudLight = "./images/clouds.webp";
 const cloudDark = "./images/clouds-dark.webp";
 const cloudReplace = document.getElementsByClassName('cloudreplace');
-let cloud = cloudLight; // Default theme for clouds
+let cloud = cloudLight;
 
 /* Preloader */
 var loader = document.getElementById("preloader");
@@ -39,7 +39,7 @@ function updateCloud() {
 
 /* Link images theme swapping */
 function updateLinkImages() {
-    const linkImages = document.querySelectorAll('.link-container img');
+    const linkImages = document.querySelectorAll('.link-container img, .utau-container img');
     const isDarkMode = body.classList.contains('dark-mode');
     linkImages.forEach(img => {
         const src = img.src;
