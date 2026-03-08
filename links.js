@@ -26,7 +26,7 @@ document.write(`
 </div>
 <!-- pann -->
 <div class="carousel-image item5">
-    <a href="https://vocapann.info/">
+    <a href="https://vocapann.neocities.org/">
         <img src="./images/carousel/pann.webp" alt="panncake">
     </a>
 </div>
