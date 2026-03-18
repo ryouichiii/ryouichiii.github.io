@@ -114,104 +114,98 @@ document.write(`
         <img src="./images/carousel/ufr.webp" alt="ufr">
     </a>
 </div>
-<!-- idoloid -->
-<div class="carousel-image item20">
-    <a href="https://www.idoloid.us/">
-        <img src="./images/carousel/idoloid.webp" alt="idoloid">
-    </a>
-</div>
 <!-- mackhouse -->
-<div class="carousel-image item21">
+<div class="carousel-image item20">
     <a href="https://www.mackhouse-soft.com/">
         <img src="./images/carousel/mackne.webp" alt="mackhousesoft">
     </a>
 </div>
 <!-- neodiva -->
-<div class="carousel-image item22">
+<div class="carousel-image item21">
     <a href="https://neodiva.xyz/#home">
         <img src="./images/carousel/neodiva.webp" alt="neodiva">
     </a>
 </div>
 <!-- tigermeat -->
-<div class="carousel-image item23">
+<div class="carousel-image item22">
     <a href="https://tigermeat.xyz/">
         <img src="./images/carousel/tigermeat.webp" alt="tigermeat">
     </a>
 </div>
 <!-- ryan-kun -->
-<div class="carousel-image item24">
+<div class="carousel-image item23">
     <a href="https://ryankuncomms.carrd.co/">
         <img src="./images/carousel/ryan.webp" alt="ryan-kun">
     </a>
 </div>
 <!-- ubloid -->
-<div class="carousel-image item25">
+<div class="carousel-image item24">
     <a href="https://projectubloid.neocities.org/">
         <img src="./images/carousel/ubloid.webp" alt="ubloid">
     </a>
 </div>
 <!-- lunarconstruct -->
-<div class="carousel-image item26">
+<div class="carousel-image item25">
     <a href="https://lunarconstruct.net/vocalsynth/">
         <img src="./images/carousel/lunarconstruct.webp" alt="lunarconstruct">
     </a>
 </div>
 <!-- potg -->
-<div class="carousel-image item27">
+<div class="carousel-image item26">
     <a href="https://potgutau.creatorlink.net/">
         <img src="./images/carousel/potg.webp" alt="potg">
     </a>
 </div>
 <!-- xepheris -->
-<div class="carousel-image item28">
+<div class="carousel-image item27">
     <a href="https://xepheris.wixsite.com/milk">
         <img src="./images/carousel/xepheris.webp" alt="xepheris">
     </a>
 </div>
 <!-- haraao -->
-<div class="carousel-image item29">
+<div class="carousel-image item28">
     <a href="https://haraaoutau.nekoweb.org/">
         <img src="./images/carousel/haraao.webp" alt="haraao">
     </a>
 </div>
 <!-- mystsaphyr -->
-<div class="carousel-image item30">
+<div class="carousel-image item29">
     <a href="https://mystsaphyr.art/">
         <img src="./images/carousel/myst.gif" alt="mystsaphyr">
     </a>
 </div>
 <!-- six -->
-<div class="carousel-image item31">
+<div class="carousel-image item30">
     <a href="https://sixlightyears.com/">
         <img src="./images/carousel/six.webp" alt="six">
     </a>
 </div>
 <!-- shinnosuke -->
-<div class="carousel-image item32">
+<div class="carousel-image item31">
     <a href="https://betweenportals.wixsite.com/utau-voicebank/shin-nosuke">
         <img src="./images/carousel/shinnosuke.webp" alt="shinnosuke">
     </a>
 </div>
 <!-- gyutaeng -->
-<div class="carousel-image item33">
+<div class="carousel-image item32">
     <a href="https://09330528.wixsite.com/vocal">
         <img src="./images/carousel/gyutaeng.webp" alt="gyutaeng">
     </a>
 </div>
 <!-- konagi -->
-<div class="carousel-image item34">
+<div class="carousel-image item33">
     <a href="https://numanoie.jimdofree.com/">
         <img src="./images/carousel/konagi.webp" alt="konagi">
     </a>
 </div>
 <!-- ttd -->
-<div class="carousel-image item35">
+<div class="carousel-image item34">
     <a href="https://text-to-death.carrd.co/">
         <img src="./images/carousel/ttd.webp" alt="ttd">
     </a>
 </div>
 <!-- thembig -->
-<div class="carousel-image item36">
+<div class="carousel-image item35">
     <a href="https://thembig.straw.page/">
         <img src="./images/carousel/thembig.webp" alt="thembig">
     </a>
